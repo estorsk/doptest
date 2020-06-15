@@ -2,7 +2,7 @@ package com.company;
 
 public class Task1 {
 
-    public static void run() {
+    public static void run1() {
 
 //        Заполните массив случайным числами и выведете максимальное,
 //        минимальное и среднее значение.
