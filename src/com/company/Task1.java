@@ -10,33 +10,37 @@ public class Task1 {
 //        который возвращает значение в промежутке [0, 1].
 
         int b;
-        int Max = 0;
-        int Min = 0;
+        int max = 0;
+        int min = 0;
         int[] arr = new int[10];
+        int i = 0;
 
-        for (int i = 0; i < arr.length; i ++) {
+        for (i = 0; i < arr.length; i ++) {
             arr[i] = (int) Math.round((Math.random() * 1));
+        }
+
+        for (i = 0; i < arr.length; i ++){
             System.out.println("Random " + i + ": " + arr[i]);
         }
 
-        Max = arr[0];
-        for (int i = 0; i < arr.length; i ++) {
-            if (arr[i] >= Max) {
-                Max = arr[i];
+        max = arr[0];
+        for (i = 0; i < arr.length; i ++) {
+            if (arr[i] >= max) {
+                max = arr[i];
             }
         }
 
-        Min = arr[0];
-        for (int i = 0; i < arr.length; i ++) {
-            if (arr[i] <= Min) {
-                Min = arr[i];
+        min = arr[0];
+        for (i = 0; i < arr.length; i ++) {
+            if (arr[i] <= min) {
+                min = arr[i];
             }
         }
 
-        b = (Min+Max)/2;
+        b = (min+max)/2;
 
-        System.out.println("Max: " + Max);
-        System.out.println("Min: " + Min);
+        System.out.println("Max: " + max);
+        System.out.println("Min: " + min);
         System.out.println("B: " + b);
 
     }
