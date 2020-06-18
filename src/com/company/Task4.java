@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Task4 {
 
@@ -9,13 +10,11 @@ public class Task4 {
 //        Удаление из массива
 //        Дан массив целых чисел и ещё одно целое число.
 //        Удалите все вхождения этого числа из массива (пропусков быть не должно).
-
-        int size = 10;
-        ArrayList<Integer> arr = new ArrayList<>();
+        List<Integer> arr = new ArrayList<>();
 
 //        Заполнение массива рандомными числами
-        for (int i = 0; i < size; i ++){
-            arr.add(i, (int) Math.round(Math.random() * 10));
+        for (int i = 0; i < 10; i++){
+            arr.add((int) Math.round(Math.random() * 10));
         }
 
         System.out.println("--------------------------------------------");
@@ -24,29 +23,14 @@ public class Task4 {
 //        Вывод текущего массива
         System.out.println("Random = " + arr);
 
-
 //        Поиск number и перенос в конец массива
-        int score = 0;
-        for (int i = 0; i < size - score; i ++){
-            int number = 4; //Целое число
-            int p = i;
-            if (arr.get(i) == number){
-                for (int j = p + 1; j < arr.size(); j ++) {
-                    arr.set(p, arr.get(j));
-                    arr.set(j, number);
-                    p++;
-                }
-                score++; // Считаем кол-во number в массиве
+        List<Integer> itemsToRemove = new ArrayList<Integer>();
+        for (Integer elementArr : arr){
+            if (elementArr.intValue() == 5){
+                itemsToRemove.add(elementArr);
             }
         }
-
-//       Удаление конец массива на кол-во number
-        if (score > 0){
-            for (int i = 0; i < score; i ++){
-                arr.remove(size - 1);
-                size--;
-            }
-        }
+        arr.removeAll(itemsToRemove);
 
 
 //        Вывод массива в консоль
