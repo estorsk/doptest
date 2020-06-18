@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class Task4 {
 
     public static void run(){
@@ -8,17 +10,19 @@ public class Task4 {
 //        Дан массив целых чисел и ещё одно целое число.
 //        Удалите все вхождения этого числа из массива (пропусков быть не должно).
 
-        int size = 15;
-        int[] arr = new int[size];
+        int size = 10;
+        ArrayList<Integer> arr = new ArrayList<>();
 
 //        Заполнение массива рандомными числами
         for (int i = 0; i < size; i ++){
-            arr[i] = (int) Math.round(Math.random() * 10);
+            arr.add(i, (int) Math.round(Math.random() * 10));
         }
 
-        for (int i = 0; i < size; i ++){
-            System.out.print(" " + arr[i] + " ");
-        }
+        System.out.println("--------------------------------------------");
+        System.out.println();
+
+//        Вывод текущего массива
+        System.out.println("Random = " + arr);
 
 
 //        Поиск number и перенос в конец массива
@@ -26,27 +30,30 @@ public class Task4 {
         for (int i = 0; i < size - score; i ++){
             int number = 4; //Целое число
             int p = i;
-            if (arr[i] == number){
-                for (int j = p + 1; j < arr.length; j ++) {
-                    arr[p] = arr[j];
-                    arr[j] = number;
+            if (arr.get(i) == number){
+                for (int j = p + 1; j < arr.size(); j ++) {
+                    arr.set(p, arr.get(j));
+                    arr.set(j, number);
                     p++;
                 }
                 score++; // Считаем кол-во number в массиве
             }
         }
 
-//        Удаление конец массива на кол-во number
-        size = size - score;
-        System.out.println();
-
-//        Вывод массива в консоль
-        for (int i = 0; i < size; i ++){
-            System.out.print(" " + arr[i] + " ");
+//       Удаление конец массива на кол-во number
+        if (score > 0){
+            for (int i = 0; i < score; i ++){
+                arr.remove(size - 1);
+                size--;
+            }
         }
 
-        System.out.println();
 
+//        Вывод массива в консоль
+        System.out.println("Answer = " + arr);
+
+        System.out.println();
+        System.out.println("--------------------------------------------");
 
     }
 
