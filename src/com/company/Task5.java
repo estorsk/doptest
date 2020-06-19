@@ -17,13 +17,10 @@ public class Task5 {
 //    ...
 //    я - 1 раз
 
-//        List<String> alphabet = new ArrayList<>();
-//        alphabet.add("абвгдеёжзийклмнопрстуфхцчшщъыьэюя");
-
         String alphabet = "а,б,в,г,д,е,ё,ж,з,и,й,к,л,м,н,о,п,р,с,т,у,ф,х,ц,ч,ш,щ,ъ,ы,ь,э,ю,я";
         String[] alphabetList = alphabet.split(",");
 
-        String srt = "Эафыа";
+        String srt = "Это просто предложение";
         String[] srtList = srt.split("");
 
         for (String elementAlp : alphabetList) {
