@@ -23,7 +23,7 @@ public class Task4 {
 //        Вывод текущего массива
         System.out.println("Random = " + arr);
 
-//        Поиск number и перенос в конец массива
+//        Поиск числа в массиве и удаление
         for(Iterator<Integer> arrIterator = arr.iterator(); arrIterator.hasNext();){
             Integer arrNext = arrIterator.next();
             if (arrNext == 4){
