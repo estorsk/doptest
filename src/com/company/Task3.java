@@ -1,37 +1,44 @@
 package com.company;
 
+import java.util.*;
+
 public class Task3 {
 
     public static void run(){
 
 //      Реализовать алгоритм сортировки пузырьком для сортировки массива.
 
-        int size = 5;
-        int[] arr = new int[size];
+        List<Integer> arr = new ArrayList<>();
 
-        for(int i = 0; i < size; i ++){
-            arr[i] = (int) Math.round(Math.random() * 9);
+        for(int i = 0; i < 10; i ++) {
+            arr.add((int) Math.round(Math.random() * 9));
         }
 
-        for(int j = 0; j < size; j ++) {
-            int n = 0;
-            for (int i = n + 1; i < size; i++) {
-                for (n = i - 1; n < i; n++) {
-                    if (arr[i] < arr[n]) {
-                        int t = arr[i];
-                        arr[i] = arr[n];
-                        arr[n] = t;
-                    }
-                }
-            }
-            size = size -1;
-            n = 0;
-            int i = 0;
-        }
+        System.out.print(" " + arr + " ");
 
-        for (int i = 0; i < arr.length; i ++){
-            System.out.println(arr[i]);
-        }
+//        Сортировка коллекции массива
+        Collections.sort(arr);
+
+//        Вывод отсортированного массива
+        System.out.println();
+        System.out.print(" " + arr + " ");
+        System.out.println();
+
+//        for(int j = 0; j < size; j ++) {
+//            int n = 0;
+//            for (int i = n + 1; i < size; i++) {
+//                for (n = i - 1; n < i; n++) {
+//                    if (arr[i] < arr[n]) {
+//                        int t = arr[i];
+//                        arr[i] = arr[n];
+//                        arr[n] = t;
+//                    }
+//                }
+//            }
+//            size = size -1;
+//            n = 0;
+//            int i = 0;
+//        }
 
     }
 }
