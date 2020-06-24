@@ -9,15 +9,15 @@ public class BaseConverter {
 //        Кельвины​, ​Фаренгейты​, и так далее. У метода должен быть метод convert, который
 //        и делает конвертацию.
 
-        if(type == typeCurrent.celsius){
+        if(type == TypeCurrent.Celsius){
             System.out.println("По Цельсию = " + value);
-        }else if (type == typeCurrent.fahrenheit){
+        }else if (type == TypeCurrent.Fahrenheit){
             double tFar = (double) 9/5 * value + 32;
             System.out.println("По Фаренгейту = " + tFar);
-        }  else if (type == typeCurrent.kelvin){
+        }  else if (type == TypeCurrent.Kelvin){
             double tKel = (double) value + 273.15;
             System.out.println("По Кельвину = " + tKel);
-        } else if (type == typeCurrent.reaumur){
+        } else if (type == TypeCurrent.Reaumur){
             double tReo = (double) value * 0.8;
             System.out.println("По Реомюру = " + tReo);
         }
@@ -25,8 +25,8 @@ public class BaseConverter {
         return 0;
     }
 
-    public enum typeCurrent{
-        celsius, fahrenheit, kelvin, reaumur;
+    public enum TypeCurrent{
+        Celsius, Fahrenheit,Kelvin, Reaumur;
     }
 
 }
