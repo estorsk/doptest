@@ -1,0 +1,61 @@
+package com.company;
+
+public class Task8 {
+
+//    Задача 8:
+//    Написать метод возведения числа в квадрат.
+//    И далее к результату прибавить число 2.
+//    Например,
+//    если Вы ввели число 2, тогда в консоль должно быть выведено число 4 и 6
+//    если Вы ввели число 3, тогда в консоль должно быть выведено число 9 и 11
+//    если Вы ввели число 5, тогда в консоль должно быть выведено число 25 и 27
+//    и т.д.
+//    То есть твой метод возводит в квадрат, НО потом ты прибавляешь двойку
+
+    protected static int sqrAndTow(Integer value) {
+
+        int sqr = 2;
+        int number = (int) Math.pow(value, sqr);
+        System.out.println("Квадрат = " + number);
+        return number+2;
+
+    }
+
+//    Задача 8.1:
+//    Написать метод возведения в куб
+
+    protected static int cube(Integer value) {
+
+        int cube = 3;
+        int number = (int) Math.pow(value, cube);
+        System.out.println("Куб = " + number);
+        return 0;
+
+    }
+
+//    Задача 8.2:
+//    Необходимо написать метод, который бы возводил число в степень.
+//    И далее два числа, возведенные в степень, должны быть просуммированы,
+//    а результат выведен в консоль.
+
+    protected static int exponentiation(Integer number, double extent) {
+
+        extent = Math.pow(number, extent);
+        return (int) extent;
+    }
+
+    protected static int sum(){
+
+        int number1 = exponentiation(2,3);
+        int number2 = exponentiation(3,2);
+
+        int sum = number1 + number2;
+
+        System.out.println("Первое число = " + number1);
+        System.out.println("Второе число = " + number2);
+        System.out.println("Сумма двух числел = " + sum);
+
+        return 0;
+    }
+
+}
