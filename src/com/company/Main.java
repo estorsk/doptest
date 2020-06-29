@@ -1,9 +1,5 @@
 package com.company;
 
-import javax.swing.text.TabExpander;
-
-import static com.company.Task7.numbers;
-
 public class Main {
 
     public static void main(String[] args) {
