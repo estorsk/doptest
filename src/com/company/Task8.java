@@ -31,7 +31,6 @@ public class Task8 {
 
         int cube = 3;
         int number = (int) Math.pow(value, cube);
-        System.out.println("Куб = " + number);
         return number;
 
     }
@@ -53,11 +52,6 @@ public class Task8 {
         int number2 = exponentiation(3,2);
 
         int sum = number1 + number2;
-
-        System.out.println("Первое число = " + number1);
-        System.out.println("Второе число = " + number2);
-        System.out.println("Сумма двух числел = " + sum);
-
         return sum;
     }
 
