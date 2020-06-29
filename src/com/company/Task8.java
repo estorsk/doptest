@@ -12,13 +12,16 @@ public class Task8 {
 //    и т.д.
 //    То есть твой метод возводит в квадрат, НО потом ты прибавляешь двойку
 
-    protected static int sqrAndTow(Integer value) {
+    protected static int sqr(Integer value) {
 
         int sqr = 2;
         int number = (int) Math.pow(value, sqr);
-        System.out.println("Квадрат = " + number);
-        return number+2;
+        return number;
 
+    }
+
+    public static int sqrAndTow(){
+        return sqr(3);
     }
 
 //    Задача 8.1:
@@ -29,7 +32,7 @@ public class Task8 {
         int cube = 3;
         int number = (int) Math.pow(value, cube);
         System.out.println("Куб = " + number);
-        return 0;
+        return number;
 
     }
 
@@ -55,7 +58,7 @@ public class Task8 {
         System.out.println("Второе число = " + number2);
         System.out.println("Сумма двух числел = " + sum);
 
-        return 0;
+        return sum;
     }
 
 }

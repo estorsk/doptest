@@ -15,7 +15,7 @@ public class Main {
         System.out.println();
 
 //        Задание 8
-        System.out.println("Квадрат+2 = " + Task8.sqrAndTow(3));
+        System.out.println("Квадрат = " + Task8.sqrAndTow() + " and " + (Task8.sqrAndTow()+2));
         System.out.println();
 
 //        Задание 8.1
